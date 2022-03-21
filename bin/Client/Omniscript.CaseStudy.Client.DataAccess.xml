@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Omniscript.CaseStudy.Client.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:Omniscript.CaseStudy.Client.DataAccess.Clients.ConsumerClient">
+            <summary>
+            Message consumer client.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Client.DataAccess.Clients.ConsumerClient.MessageHandler">
+            <summary>
+            Consumed message handler.
+            </summary>
+            <param name="channel">Queue channel.</param>
+            <param name="deliveryTag">Delivery identifier.</param>
+            <param name="messageGuid">Message identifier.</param>
+            <param name="messageType">Type of the message.</param>
+            <param name="message">Message body.</param>
+        </member>
+        <member name="E:Omniscript.CaseStudy.Client.DataAccess.Clients.ConsumerClient.HandleMessage">
+            <summary>
+            Message consumed event.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.DataAccess.Clients.ConsumerClient.#ctor(Microsoft.Extensions.Logging.ILogger{Omniscript.CaseStudy.Client.DataAccess.Clients.ConsumerClient},Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient)">
+            <summary>
+            Message consumer client constructor.
+            </summary>
+            <param name="logger">Default logger instance.</param>
+            <param name="queueClient">Queue service client instance.</param>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.DataAccess.Clients.ConsumerClient.Subscribe">
+            <summary>
+            Subscribes for an answers from the server.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient">
+            <summary>
+            Queue service client.
+            </summary>
+        </member>
+        <member name="F:Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient.RabbitMqClientToServerQueueName">
+            <summary>
+            Default RabbitMQ Client>>>Server queue name.
+            </summary>
+        </member>
+        <member name="F:Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient.RabbitMqClientFromServerQueueName">
+            <summary>
+            Default RabbitMQ Client&lt;&lt;&lt;Server queue name.
+            </summary>
+        </member>
+        <member name="F:Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient.MessageIdHeaderName">
+            <summary>
+            Name of the "MessageId" message header.
+            </summary>
+        </member>
+        <member name="F:Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient.MessageContentTypeHeaderName">
+            <summary>
+            Name of the "MessageContentType" message header.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient.Channel">
+            <summary>
+            Queue channel.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient.#ctor">
+            <summary>
+            Queue service client constructor.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient.Finalize">
+            <summary>
+            Disposes unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient.Dispose">
+            <summary>
+            Disposes resources.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Client.DataAccess.Repositories.MessageRepository">
+            <summary>
+            Message pipe repository.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.DataAccess.Repositories.MessageRepository.#ctor(Omniscript.CaseStudy.Client.DataAccess.Clients.QueueClient)">
+            <summary>
+            Message pipe repository constructor.
+            </summary>
+            <param name="queueClient">Queue service client instance.</param>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.DataAccess.Repositories.MessageRepository.QueueMessage``1(``0)">
+            <summary>
+            Puts message into the message pipe.
+            </summary>
+            <typeparam name="T">Message type.</typeparam>
+            <param name="message">Message instance.</param>
+            <returns>GUID of the queued message.</returns>
+        </member>
+    </members>
+</doc>

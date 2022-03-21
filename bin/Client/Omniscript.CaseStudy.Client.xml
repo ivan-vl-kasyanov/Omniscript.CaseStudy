@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Omniscript.CaseStudy.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Omniscript.CaseStudy.Client.Controllers.CustomerController">
+            <summary>
+            Customer operations controller.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.Controllers.CustomerController.#ctor(MediatR.IMediator)">
+            <summary>
+            Constructor of the customer operations controller.
+            </summary>
+            <param name="mediator">Defines a mediator to encapsulate request/response and publishing interaction patterns.</param>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.Controllers.CustomerController.GetCustomersAsync(Omniscript.CaseStudy.Server.Models.Customer.GetCustomers.GetCustomersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Requesting customers.
+            </summary>
+            <param name="request">Request of customers.</param>
+            <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+            <returns>Response for the request of customers.</returns>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.Controllers.CustomerController.CreateCustomerAsync(Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.CreateCustomerRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creating new customer.
+            </summary>
+            <param name="request">Request for customer creation.</param>
+            <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+            <returns>Operation HTTP status code.</returns>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.Controllers.CustomerController.UpdateAddressAsync(Omniscript.CaseStudy.Server.Models.Customer.UpdateAddress.UpdateAddressRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updating customer's address.
+            </summary>
+            <param name="request">Request for updating customer's address.</param>
+            <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+            <returns>Operation HTTP status code.</returns>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Client.Program">
+            <summary>
+            Main assembly class.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Client.Program.Main(System.String[])">
+            <summary>
+            Main program entry point.
+            </summary>
+            <param name="args">Program arguments.</param>
+        </member>
+    </members>
+</doc>
