@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Omniscript.CaseStudy.Server.Models</name>
+    </assembly>
+    <members>
+        <member name="T:Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.CreateCustomerRequest">
+            <summary>
+            Request for customer creation.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.CreateCustomerRequest.NewCustomer">
+            <summary>
+            New customer entity.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.CreateCustomerRequest.#ctor(Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.NewCustomerModel)">
+            <summary>
+            Constructor of the request for customer creation.
+            </summary>
+            <param name="newCustomer">New customer entity.</param>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.NewCustomerModel">
+            <summary>
+            Model of the new customer.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.NewCustomerModel.Email">
+            <summary>
+            E-mail address.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.NewCustomerModel.Address">
+            <summary>
+            Customer's address instance.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.NewCustomerModel.#ctor(System.String,Omniscript.CaseStudy.Server.Models.Entities.AddressModel)">
+            <summary>
+            Constructor of the model of the customer.
+            </summary>
+            <param name="email">E-mail address.</param>
+            <param name="address">Customer's address instance.</param>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.Customer.GetCustomers.GetCustomersRequest">
+            <summary>
+            Request of customers.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Customer.GetCustomers.GetCustomersRequest.Skip">
+            <summary>
+            (Optional) Amount of skipped customers.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Customer.GetCustomers.GetCustomersRequest.Take">
+            <summary>
+            (Optional) Amount of taken customers.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.Customer.GetCustomers.GetCustomersRequest.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.Customer.GetCustomers.GetCustomersResponse">
+            <summary>
+            Response for the request of customers.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Customer.GetCustomers.GetCustomersResponse.Customers">
+            <summary>
+            Acquired customers.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Customer.GetCustomers.GetCustomersResponse.CustomersTotalCount">
+            <summary>
+            Total amount of stored customers.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.Customer.GetCustomers.GetCustomersResponse.#ctor(System.Collections.Generic.IEnumerable{Omniscript.CaseStudy.Server.Models.Entities.CustomerModel},System.Int32)">
+            <summary>
+            Constructor of the response for the request of customers.
+            </summary>
+            <param name="customers">Acquired customers.</param>
+            <param name="customersTotalCount">Total amount of stored customers.</param>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.Customer.UpdateAddress.UpdateAddressRequest">
+            <summary>
+            Request for updating customer's address.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Customer.UpdateAddress.UpdateAddressRequest.CustomerId">
+            <summary>
+            Customer's identifier.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Customer.UpdateAddress.UpdateAddressRequest.Address">
+            <summary>
+            Customer's address instance.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.Customer.UpdateAddress.UpdateAddressRequest.#ctor(System.Int64,Omniscript.CaseStudy.Server.Models.Entities.AddressModel)">
+            <summary>
+            Constructor for the request for updating customer's address.
+            </summary>
+            <param name="customerId">Customer's identifier.</param>
+            <param name="address">Customer's address instance.</param>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.Entities.AddressModel">
+            <summary>
+            Model of the address.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Entities.AddressModel.Country">
+            <summary>
+            Country.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Entities.AddressModel.City">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Entities.AddressModel.Street">
+            <summary>
+            Street.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.Entities.AddressModel.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor of the model of the address.
+            </summary>
+            <param name="country">Country.</param>
+            <param name="city">City.</param>
+            <param name="street">Street.</param>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.Entities.CustomerModel">
+            <summary>
+            Model of the customer.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Entities.CustomerModel.Id">
+            <summary>
+            Identifier.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Entities.CustomerModel.Email">
+            <summary>
+            E-mail address.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Entities.CustomerModel.Address">
+            <summary>
+            Customer's address instance.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Entities.CustomerModel.CreatedAt">
+            <summary>
+            Record created timestamp.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Entities.CustomerModel.IsArchived">
+            <summary>
+            An indication that the entity has been archived.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.Entities.CustomerModel.PurchasedAt">
+            <summary>
+            Purchased timestamp.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.Entities.CustomerModel.#ctor(System.Int64,System.String,Omniscript.CaseStudy.Server.Models.Entities.AddressModel,System.DateTimeOffset,System.Boolean,System.Nullable{System.DateTimeOffset})">
+            <summary>
+            Constructor of the model of the customer.
+            </summary>
+            <param name="id">Identifier.</param>
+            <param name="email">E-mail address.</param>
+            <param name="address">Customer's address instance.</param>
+            <param name="createdAt">Record created timestamp.</param>
+            <param name="isArchived">An indication that the entity has been archived.</param>
+            <param name="purchasedAt">Purchased timestamp.</param>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.MessageModels.ServerMultipleEntityResponseMessageModel">
+            <summary>
+            Model of the multiple entity server response.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerMultipleEntityResponseMessageModel.StatusCode">
+            <summary>
+            Response HTTP result.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerMultipleEntityResponseMessageModel.Severity">
+            <summary>
+            (Optional) Response severity level.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerMultipleEntityResponseMessageModel.Message">
+            <summary>
+            (Optional) Response status message.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerMultipleEntityResponseMessageModel.SingleEntityFullTypeName">
+            <summary>
+            Full type name of the single responded entity.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerMultipleEntityResponseMessageModel.Entities">
+            <summary>
+            (Optional) Responded entities.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerMultipleEntityResponseMessageModel.MetadataFullTypeName">
+            <summary>
+            (Optional) Full type name of the responded metadata.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerMultipleEntityResponseMessageModel.Metadata">
+            <summary>
+            (Optional) Responded metadata.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.MessageModels.ServerMultipleEntityResponseMessageModel.#ctor(System.Net.HttpStatusCode,System.Nullable{Microsoft.Extensions.Logging.LogLevel},System.String,System.String,System.Collections.Generic.IEnumerable{System.Object},System.String,System.Object)">
+            <summary>
+            Constructor of the model of the single entity server response.
+            </summary>
+            <param name="statusCode">Response HTTP result.</param>
+            <param name="severity">(Optional) Response severity level.</param>
+            <param name="message">(Optional) Response status message.</param>
+            <param name="singleEntityFullTypeName">Full type name of the single responded entity.</param>
+            <param name="entities">(Optional) Responded entities.</param>
+            <param name="metadataFullTypeName">(Optional) Full type name of the responded metadata.</param>
+            <param name="metadata">(Optional) Responded metadata.</param>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSimpleResponseMessageModel">
+            <summary>
+            Model of the simple server response.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSimpleResponseMessageModel.StatusCode">
+            <summary>
+            Response HTTP result.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSimpleResponseMessageModel.Severity">
+            <summary>
+            (Optional) Response severity level.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSimpleResponseMessageModel.Message">
+            <summary>
+            (Optional) Response status message.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSingleEntityResponseMessageModel">
+            <summary>
+            Model of the single entity server response.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSingleEntityResponseMessageModel.StatusCode">
+            <summary>
+            Response HTTP result.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSingleEntityResponseMessageModel.Severity">
+            <summary>
+            (Optional) Response severity level.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSingleEntityResponseMessageModel.Message">
+            <summary>
+            (Optional) Response status message.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSingleEntityResponseMessageModel.EntityFullTypeName">
+            <summary>
+            Full type name of the responded entity.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSingleEntityResponseMessageModel.Entity">
+            <summary>
+            (Optional) Responded entity.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.MessageModels.ServerSingleEntityResponseMessageModel.#ctor(System.Net.HttpStatusCode,System.Nullable{Microsoft.Extensions.Logging.LogLevel},System.String,System.String,System.Object)">
+            <summary>
+            Constructor of the model of the single entity server response.
+            </summary>
+            <param name="statusCode">Response HTTP result.</param>
+            <param name="severity">(Optional) Response severity level.</param>
+            <param name="message">(Optional) Response status message.</param>
+            <param name="entityFullTypeName">Full type name of the responded entity.</param>
+            <param name="entity">(Optional) Responded entity.</param>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.Models.MessageTypeResolver">
+            <summary>
+            Provides resolving for message types.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Models.MessageTypeResolver.Resolve(System.String)">
+            <summary>
+            Resolves message types.
+            </summary>
+            <param name="messageTypeName">Short message type name.</param>
+            <returns>Message type.</returns>
+        </member>
+    </members>
+</doc>

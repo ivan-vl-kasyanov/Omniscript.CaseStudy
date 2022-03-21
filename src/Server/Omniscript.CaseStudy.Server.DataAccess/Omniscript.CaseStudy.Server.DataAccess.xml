@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Omniscript.CaseStudy.Server.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:Omniscript.CaseStudy.Server.DataAccess.Clients.ConsumerClient">
+            <summary>
+            Message consumer client.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.DataAccess.Clients.ConsumerClient.MessageHandler">
+            <summary>
+            Consumed message handler.
+            </summary>
+            <param name="channel">Queue channel.</param>
+            <param name="deliveryTag">Delivery identifier.</param>
+            <param name="messageGuid">Message identifier.</param>
+            <param name="messageType">Type of the message.</param>
+            <param name="message">Message body.</param>
+        </member>
+        <member name="E:Omniscript.CaseStudy.Server.DataAccess.Clients.ConsumerClient.HandleMessage">
+            <summary>
+            Message consumed event.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Clients.ConsumerClient.#ctor(Microsoft.Extensions.Logging.ILogger{Omniscript.CaseStudy.Server.DataAccess.Clients.ConsumerClient},Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient)">
+            <summary>
+            Message consumer client constructor.
+            </summary>
+            <param name="logger">Default logger instance.</param>
+            <param name="queueClient">Queue service client instance.</param>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Clients.ConsumerClient.Subscribe">
+            <summary>
+            Subscribes for an answers from the server.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.DataAccess.Clients.DatabaseClient">
+            <summary>
+            Database client.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.Clients.DatabaseClient.Connection">
+            <summary>
+            Database connection instance.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Clients.DatabaseClient.RecreateDatabase">
+            <summary>
+            Recreates database as new instance. Wipes out all old data.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Clients.DatabaseClient.Finalize">
+            <summary>
+            Disposes unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Clients.DatabaseClient.Dispose">
+            <summary>
+            Disposes resources.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient">
+            <summary>
+            Queue service client.
+            </summary>
+        </member>
+        <member name="F:Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient.RabbitMqClientToServerQueueName">
+            <summary>
+            Default RabbitMQ Client>>>Server queue name.
+            </summary>
+        </member>
+        <member name="F:Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient.RabbitMqClientFromServerQueueName">
+            <summary>
+            Default RabbitMQ Client&lt;&lt;&lt;Server queue name.
+            </summary>
+        </member>
+        <member name="F:Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient.MessageIdHeaderName">
+            <summary>
+            Name of the "MessageId" message header.
+            </summary>
+        </member>
+        <member name="F:Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient.MessageContentTypeHeaderName">
+            <summary>
+            Name of the "MessageContentType" message header.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient.Channel">
+            <summary>
+            Queue channel.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient.#ctor">
+            <summary>
+            Queue service client constructor.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient.Finalize">
+            <summary>
+            Disposes unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient.Dispose">
+            <summary>
+            Disposes resources.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.DataAccess.DAO.AddressDao">
+            <summary>
+            Address data access object.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.DAO.AddressDao.CustomerId">
+            <summary>
+            Customer's identifier.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.DAO.AddressDao.Country">
+            <summary>
+            Country.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.DAO.AddressDao.City">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.DAO.AddressDao.Street">
+            <summary>
+            Street.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.DAO.AddressDao.#ctor">
+            <summary>
+            Constructor of the customer data access object.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.DataAccess.DAO.CustomerDao">
+            <summary>
+            Customer data access object.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.DAO.CustomerDao.Id">
+            <summary>
+            Identifier.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.DAO.CustomerDao.Email">
+            <summary>
+            E-mail address.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.DAO.CustomerDao.CreatedAt">
+            <summary>
+            Record created timestamp.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.DAO.CustomerDao.IsArchived">
+            <summary>
+            An indication that the entity has been archived.
+            </summary>
+        </member>
+        <member name="P:Omniscript.CaseStudy.Server.DataAccess.DAO.CustomerDao.PurchasedAt">
+            <summary>
+            Purchased timestamp.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.DAO.CustomerDao.#ctor">
+            <summary>
+            Constructor of the customer data access object.
+            </summary>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.DataAccess.Repositories.CustomerRepository">
+            <summary>
+            Customer data repository.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Repositories.CustomerRepository.#ctor(Omniscript.CaseStudy.Server.DataAccess.Clients.DatabaseClient)">
+            <summary>
+            Constructor of the customer data repository.
+            </summary>
+            <param name="databaseClient">Database client instance.</param>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Repositories.CustomerRepository.GetCustomers(System.Int32,System.Int32)">
+            <summary>
+            Returns requested customers.
+            </summary>
+            <param name="skip">Amount of skipped customers.</param>
+            <param name="take">Amount of taken customers.</param>
+            <returns>Total customers count and requested customers.</returns>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Repositories.CustomerRepository.CreateCustomer(Omniscript.CaseStudy.Server.Models.Customer.CreateCustomer.NewCustomerModel)">
+            <summary>
+            Creates new customer entity.
+            </summary>
+            <param name="newCustomer">New customer entity.</param>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Repositories.CustomerRepository.UpdateAddress(System.Int64,Omniscript.CaseStudy.Server.Models.Entities.AddressModel)">
+            <summary>
+            Updates customer's address.
+            </summary>
+            <param name="customerId">Customer's identifier.</param>
+            <param name="newAddress">Customer's new address instance.</param>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.DataAccess.Repositories.CustomerRepository.UpdateCustomerPurchase(System.String,System.DateTimeOffset)">
+            <summary>
+            Updates customer's purchase info.
+            </summary>
+            <param name="email">E-mail address.</param>
+            <param name="orderCreatedAt">Order creation timestamp.</param>
+        </member>
+        <member name="T:Omniscript.CaseStudy.Server.MessageRepository">
+            <summary>
+            Message pipe repository.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.MessageRepository.#ctor(Omniscript.CaseStudy.Server.DataAccess.Clients.QueueClient)">
+            <summary>
+            Message pipe repository constructor.
+            </summary>
+            <param name="queueClient">Queue service client instance.</param>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.MessageRepository.QueueMessage``1(System.Guid,``0)">
+            <summary>
+            Puts message into the message pipe.
+            </summary>
+            <param name="messageGuid">GUID of the client message.</param>
+            <typeparam name="T">Message type.</typeparam>
+            <param name="message">Message instance.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Omniscript.CaseStudy.Server</name>
+    </assembly>
+    <members>
+        <member name="T:Omniscript.CaseStudy.Server.Program">
+            <summary>
+            Main assembly class.
+            </summary>
+        </member>
+        <member name="M:Omniscript.CaseStudy.Server.Program.Main(System.String[])">
+            <summary>
+            Main program entry point.
+            </summary>
+            <param name="args">Program arguments.</param>
+        </member>
+    </members>
+</doc>
